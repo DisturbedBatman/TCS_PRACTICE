@@ -1,0 +1,17 @@
+<project name="FirstProject" default="copyDemo">
+
+	<target name="copyDemo">
+	
+		<copy file="testdoc.txt" tofile="copytestdoc.txt"/>
+		<copy todir="dest">
+			<fileset dir="demo">
+				<exclude name="**/*.xml"/>
+			</fileset>
+		</copy>
+		
+		<mkdir dir="dir1"/>
+		<copy file="testdoc.txt" tofile="dir1/copytestdoc.txt"/>
+	
+	</target>
+
+</project> 
